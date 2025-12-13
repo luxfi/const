@@ -1,10 +1,10 @@
 module github.com/luxfi/constants
 
-go 1.25.4
+go 1.25.5
 
 require (
-	github.com/luxfi/ids v1.2.4
-	github.com/luxfi/math v0.1.4
+	github.com/luxfi/ids v1.1.4
+	github.com/luxfi/math v1.0.1
 	github.com/luxfi/node v1.20.3
 	github.com/stretchr/testify v1.11.1
 )
@@ -13,8 +13,9 @@ require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/gorilla/rpc v1.2.1 // indirect
 	github.com/klauspost/compress v1.18.0 // indirect
-	github.com/luxfi/crypto v1.17.22 // indirect
+	github.com/luxfi/crypto v1.17.15 // indirect
 	github.com/luxfi/mock v0.1.0 // indirect
+	github.com/luxfi/utils v1.0.0 // indirect
 	github.com/mr-tron/base58 v1.2.0 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	go.uber.org/mock v0.6.0 // indirect
