@@ -5,16 +5,13 @@ package constants
 
 import (
 	"time"
-
-	"github.com/luxfi/utils/compression"
-	"github.com/luxfi/utils/units"
 )
 
 const (
 	// The network must be "tcp", "tcp4", "tcp6", "unix" or "unixpacket".
 	NetworkType = "tcp"
 
-	DefaultMaxMessageSize  = 2 * units.MiB
+	DefaultMaxMessageSize  = 2 * MiB
 	DefaultPingPongTimeout = 30 * time.Second
 	DefaultPingFrequency   = 3 * DefaultPingPongTimeout / 4
 	DefaultByteSliceCap    = 128
@@ -47,11 +44,11 @@ const (
 	DefaultNetworkReadHandshakeTimeout             = 15 * time.Second
 	DefaultNoIngressValidatorConnectionGracePeriod = 10 * time.Minute
 
-	DefaultNetworkCompressionType           = compression.TypeZstd
+	DefaultNetworkCompressionType           = CompressionTypeZstd
 	DefaultNetworkMaxClockDifference        = time.Minute
 	DefaultNetworkRequireValidatorToConnect = false
-	DefaultNetworkPeerReadBufferSize        = 8 * units.KiB
-	DefaultNetworkPeerWriteBufferSize       = 8 * units.KiB
+	DefaultNetworkPeerReadBufferSize        = 8 * KiB
+	DefaultNetworkPeerWriteBufferSize       = 8 * KiB
 
 	DefaultNetworkTCPProxyEnabled = false
 
@@ -73,19 +70,19 @@ const (
 	DefaultFrontierPollFrequency    = 100 * time.Millisecond
 
 	// Inbound Throttling
-	DefaultInboundThrottlerAtLargeAllocSize         = 6 * units.MiB
-	DefaultInboundThrottlerVdrAllocSize             = 32 * units.MiB
+	DefaultInboundThrottlerAtLargeAllocSize         = 6 * MiB
+	DefaultInboundThrottlerVdrAllocSize             = 32 * MiB
 	DefaultInboundThrottlerNodeMaxAtLargeBytes      = DefaultMaxMessageSize
 	DefaultInboundThrottlerMaxProcessingMsgsPerNode = 1024
-	DefaultInboundThrottlerBandwidthRefillRate      = 512 * units.KiB
+	DefaultInboundThrottlerBandwidthRefillRate      = 512 * KiB
 	DefaultInboundThrottlerBandwidthMaxBurstSize    = DefaultMaxMessageSize
 	DefaultInboundThrottlerCPUMaxRecheckDelay       = 5 * time.Second
 	DefaultInboundThrottlerDiskMaxRecheckDelay      = 5 * time.Second
 	MinInboundThrottlerMaxRecheckDelay              = time.Millisecond
 
 	// Outbound Throttling
-	DefaultOutboundThrottlerAtLargeAllocSize    = 32 * units.MiB
-	DefaultOutboundThrottlerVdrAllocSize        = 32 * units.MiB
+	DefaultOutboundThrottlerAtLargeAllocSize    = 32 * MiB
+	DefaultOutboundThrottlerVdrAllocSize        = 32 * MiB
 	DefaultOutboundThrottlerNodeMaxAtLargeBytes = DefaultMaxMessageSize
 
 	// Network Health
