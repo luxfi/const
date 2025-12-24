@@ -18,6 +18,11 @@ const (
 	GRPCPortDevnet  = 8370 // devnet gRPC server (chain ID 96370)
 	GRPCPortCustom  = 8371 // custom network gRPC server (chainID 1337)
 
+	// Aliases for backward compatibility
+	// "local" is deprecated, use "custom" instead
+	GRPCPortLocal        = GRPCPortCustom        // deprecated: use GRPCPortCustom
+	GRPCGatewayPortLocal = GRPCGatewayPortCustom // deprecated: use GRPCGatewayPortCustom
+
 	// Gateway ports - offset by 10 from gRPC
 	GRPCGatewayPortTestnet = 8378 // testnet gateway
 	GRPCGatewayPortMainnet = 8379 // mainnet gateway
@@ -58,7 +63,7 @@ func GetGRPCPorts(networkType string) NetworkGRPCPorts {
 		return NetworkGRPCPorts{Server: GRPCPortTestnet, Gateway: GRPCGatewayPortTestnet}
 	case "devnet":
 		return NetworkGRPCPorts{Server: GRPCPortDevnet, Gateway: GRPCGatewayPortDevnet}
-	case "custom":
+	case "custom", "local": // "local" is deprecated alias for "custom"
 		return NetworkGRPCPorts{Server: GRPCPortCustom, Gateway: GRPCGatewayPortCustom}
 	default:
 		// Default to custom ports for unknown network types
@@ -76,7 +81,7 @@ func GetNetworkStateFile(networkType string) string {
 		return "testnet_network_state.json"
 	case "devnet":
 		return "devnet_network_state.json"
-	case "custom":
+	case "custom", "local": // "local" is deprecated alias for "custom"
 		return "custom_network_state.json"
 	default:
 		return networkType + "_network_state.json"
@@ -124,7 +129,7 @@ func GetNetworkPorts(networkType string) NetworkPorts {
 			NodeBase:  NodePortDevnet,
 			NetworkID: 96370, // devnet network ID
 		}
-	case "custom":
+	case "custom", "local": // "local" is deprecated alias for "custom"
 		return NetworkPorts{
 			GRPC:      GRPCPortCustom,
 			Gateway:   GRPCGatewayPortCustom,
