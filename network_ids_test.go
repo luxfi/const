@@ -27,12 +27,12 @@ func TestGetHRP(t *testing.T) {
 			hrp: TestnetHRP,
 		},
 		{
-			id:  LocalID,
-			hrp: LocalHRP,
+			id:  CustomID,
+			hrp: CustomHRP,
 		},
 		{
 			id:  4294967295,
-			hrp: FallbackHRP,
+			hrp: CustomHRP, // fallback to custom for unknown networks
 		},
 	}
 	for _, test := range tests {
@@ -60,8 +60,8 @@ func TestNetworkName(t *testing.T) {
 			name: TestnetName,
 		},
 		{
-			id:   LocalID,
-			name: LocalName,
+			id:   CustomID,
+			name: CustomName,
 		},
 		{
 			id:   4294967295,
@@ -98,8 +98,8 @@ func TestNetworkID(t *testing.T) {
 			id:   TestnetID,
 		},
 		{
-			name: LocalName,
-			id:   LocalID,
+			name: CustomName,
+			id:   CustomID,
 		},
 		{
 			name: "network-4294967295",

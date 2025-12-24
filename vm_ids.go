@@ -14,6 +14,7 @@ const (
 	AIVMName         = "aivm"         // A-Chain: AI Virtual Machine
 	BridgeVMName     = "bridgevm"     // B-Chain: Bridge/Cross-chain
 	ThresholdVMName  = "thresholdvm"  // T-Chain: Threshold signatures
+	KMSVMName        = "kmsvm"        // K-Chain: Key Management Service
 	ZKVMName         = "zkvm"         // Z-Chain: Zero-Knowledge proofs
 	GraphVMName      = "graphvm"      // G-Chain: GraphQL/DGraph unified data layer
 	DexVMName        = "dexvm"        // D-Chain: Decentralized Exchange
@@ -32,6 +33,7 @@ var (
 	AIVMID          = AttestationVMID            // Alias for AttestationVMID
 	BridgeVMID      = ids.ID{'b', 'r', 'i', 'd', 'g', 'e', 'v', 'm'}
 	ThresholdVMID   = ids.ID{'t', 'h', 'r', 'e', 's', 'h', 'o', 'l', 'd', 'v', 'm'}
+	KMSVMID         = ids.ID{'k', 'm', 's', 'v', 'm'}                            // K-Chain: Key Management Service
 	ZKVMID          = ids.ID{'z', 'k', 'v', 'm'}
 	GraphVMID       = ids.ID{'g', 'r', 'a', 'p', 'h', 'v', 'm'}
 	DexVMID         = ids.ID{'d', 'e', 'x', 'v', 'm'} // D-Chain: Decentralized Exchange
@@ -57,6 +59,8 @@ func VMName(vmID ids.ID) string {
 		return BridgeVMName
 	case ThresholdVMID:
 		return ThresholdVMName
+	case KMSVMID:
+		return KMSVMName
 	case ZKVMID:
 		return ZKVMName
 	case GraphVMID:

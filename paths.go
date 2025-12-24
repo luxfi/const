@@ -24,11 +24,17 @@ const (
 // Snapshot configuration
 const (
 	// SnapshotPrefix is the prefix for network snapshot directories
-	// Full path: ~/.lux/snapshots/net-snapshot-{name}/
-	SnapshotPrefix = "net-snapshot-"
+	// Full path: ~/.lux/snapshots/lux-snapshot-{name}/
+	SnapshotPrefix = "lux-snapshot-"
 
 	// DefaultSnapshotName is the default snapshot name
-	DefaultSnapshotName = "default"
+	DefaultSnapshotName = "default-20251225"
+
+	// Network-specific snapshot names
+	MainnetSnapshotName = "mainnet-20251225"
+	TestnetSnapshotName = "testnet-20251225"
+	DevnetSnapshotName  = "devnet-20251225"
+	CustomSnapshotName  = "custom-20251225"
 )
 
 // Directory structure
