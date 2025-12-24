@@ -5,7 +5,6 @@ go 1.25.5
 require (
 	github.com/luxfi/ids v1.2.4
 	github.com/luxfi/math v1.0.5
-	github.com/luxfi/utils v1.0.2
 	github.com/stretchr/testify v1.11.1
 )
 
@@ -15,6 +14,7 @@ require (
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/luxfi/crypto v1.17.25 // indirect
 	github.com/luxfi/sampler v1.0.0 // indirect
+	github.com/luxfi/utils v1.0.2 // indirect
 	github.com/mr-tron/base58 v1.2.0 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	golang.org/x/crypto v0.46.0 // indirect
