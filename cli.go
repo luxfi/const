@@ -18,7 +18,7 @@ const (
 
 	// Local network (single-node dev mode or 3-node localnet)
 	LocalAPIEndpoint        = "http://127.0.0.1:9630"
-	LocalWSEndpoint         = "ws://127.0.0.1:9630/ext/bc/C/ws"
+	LocalWSEndpoint         = "ws://127.0.0.1:9630/v1/bc/C/ws"
 	LocalNetworkID          = LocalID // 1337
 	NetrunnerLocalNetworkID = LocalID // 1337
 	LocalNetworkNumNodes    = 3
